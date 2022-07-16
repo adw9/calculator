@@ -45,6 +45,7 @@ namespace SimpleCalculator
             this.buttonSubtraction = new System.Windows.Forms.Button();
             this.buttonMultiply = new System.Windows.Forms.Button();
             this.buttonDivide = new System.Windows.Forms.Button();
+            this.numberBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -57,6 +58,7 @@ namespace SimpleCalculator
             this.button1.Text = "1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.UseWaitCursor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
@@ -68,6 +70,7 @@ namespace SimpleCalculator
             this.button4.Text = "4";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.UseWaitCursor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button7
             // 
@@ -79,6 +82,7 @@ namespace SimpleCalculator
             this.button7.Text = "7";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.UseWaitCursor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button2
             // 
@@ -90,6 +94,7 @@ namespace SimpleCalculator
             this.button2.Text = "2";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.UseWaitCursor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button5
             // 
@@ -101,6 +106,7 @@ namespace SimpleCalculator
             this.button5.Text = "5";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.UseWaitCursor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button8
             // 
@@ -112,6 +118,7 @@ namespace SimpleCalculator
             this.button8.Text = "8";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.UseWaitCursor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button3
             // 
@@ -123,6 +130,7 @@ namespace SimpleCalculator
             this.button3.Text = "3";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.UseWaitCursor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button6
             // 
@@ -134,6 +142,7 @@ namespace SimpleCalculator
             this.button6.Text = "6";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.UseWaitCursor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button9
             // 
@@ -145,6 +154,7 @@ namespace SimpleCalculator
             this.button9.Text = "9";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.UseWaitCursor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button0
             // 
@@ -156,6 +166,7 @@ namespace SimpleCalculator
             this.button0.Text = "0";
             this.button0.UseVisualStyleBackColor = true;
             this.button0.UseWaitCursor = true;
+            this.button0.Click += new System.EventHandler(this.button0_Click);
             // 
             // buttonDecimal
             // 
@@ -167,6 +178,7 @@ namespace SimpleCalculator
             this.buttonDecimal.Text = ".";
             this.buttonDecimal.UseVisualStyleBackColor = true;
             this.buttonDecimal.UseWaitCursor = true;
+            this.buttonDecimal.Click += new System.EventHandler(this.buttonDecimal_Click);
             // 
             // buttonEquals
             // 
@@ -223,11 +235,21 @@ namespace SimpleCalculator
             this.buttonDivide.UseVisualStyleBackColor = true;
             this.buttonDivide.UseWaitCursor = true;
             // 
+            // numberBox
+            // 
+            this.numberBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 33F);
+            this.numberBox.Location = new System.Drawing.Point(12, 156);
+            this.numberBox.Name = "numberBox";
+            this.numberBox.ReadOnly = true;
+            this.numberBox.Size = new System.Drawing.Size(630, 82);
+            this.numberBox.TabIndex = 23;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 712);
+            this.Controls.Add(this.numberBox);
             this.Controls.Add(this.buttonAddition);
             this.Controls.Add(this.buttonSubtraction);
             this.Controls.Add(this.buttonMultiply);
@@ -249,6 +271,7 @@ namespace SimpleCalculator
             this.UseWaitCursor = true;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -270,6 +293,7 @@ namespace SimpleCalculator
         private System.Windows.Forms.Button buttonSubtraction;
         private System.Windows.Forms.Button buttonMultiply;
         private System.Windows.Forms.Button buttonDivide;
+        private System.Windows.Forms.TextBox numberBox;
     }
 }
 
