@@ -201,6 +201,7 @@ namespace SimpleCalculator
             this.buttonAddition.Text = "+";
             this.buttonAddition.UseVisualStyleBackColor = true;
             this.buttonAddition.UseWaitCursor = true;
+            this.buttonAddition.Click += new System.EventHandler(this.buttonAddition_Click);
             // 
             // buttonSubtraction
             // 
@@ -245,6 +246,7 @@ namespace SimpleCalculator
             this.numberBox.Size = new System.Drawing.Size(630, 82);
             this.numberBox.TabIndex = 23;
             this.numberBox.TabStop = false;
+            this.numberBox.UseWaitCursor = true;
             // 
             // Calculator
             // 

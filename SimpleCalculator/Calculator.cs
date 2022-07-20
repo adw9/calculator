@@ -14,6 +14,7 @@ namespace SimpleCalculator
         //Number Storage
         double num1;
         double num2;
+        double num3;    
         String operation;
 
 
@@ -83,6 +84,42 @@ namespace SimpleCalculator
         private void buttonDecimal_Click(object sender, EventArgs e)
         {
             numberBox.Text += '.';
+        }
+
+
+        private void calculate(double num1, double num2, String operation)
+        {
+
+            double num3;
+
+            switch (operation)
+            {
+                case "+":
+                    num3 = num1 + num2;
+                    num1 = 0;
+                    num2 = 0;
+
+                    numberBox.Text = num3.ToString();
+                    break;
+            }
+
+        }
+
+        private void buttonAddition_Click(object sender, EventArgs e)
+        {
+            if(num1 == 0)
+            {
+                num1 = Double.Parse(numberBox.Text);
+                numberBox.Text = "";
+                operation = "+";
+            }
+            else if(num2 == 0)
+            {
+                num2 = Double.Parse(numberBox.Text);
+                numberBox.Text = "";
+                calculate(num1, num2, operation);
+            }
+           
         }
     }
 }
