@@ -239,10 +239,12 @@ namespace SimpleCalculator
             // 
             this.numberBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 33F);
             this.numberBox.Location = new System.Drawing.Point(12, 156);
+            this.numberBox.MaxLength = 17;
             this.numberBox.Name = "numberBox";
             this.numberBox.ReadOnly = true;
             this.numberBox.Size = new System.Drawing.Size(630, 82);
             this.numberBox.TabIndex = 23;
+            this.numberBox.TabStop = false;
             // 
             // Calculator
             // 
@@ -276,6 +278,10 @@ namespace SimpleCalculator
         }
 
         #endregion
+
+
+
+
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;

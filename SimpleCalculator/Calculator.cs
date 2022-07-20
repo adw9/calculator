@@ -11,6 +11,15 @@ namespace SimpleCalculator
 {
     public partial class Calculator : Form
     {
+        //Number Storage
+        double num1;
+        double num2;
+        String operation;
+
+
+
+
+
         public Calculator()
         {
             InitializeComponent();
