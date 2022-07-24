@@ -90,7 +90,7 @@ namespace SimpleCalculator
         private void calculate(double num1, double num2, String operation)
         {
 
-            double num3;
+            
 
             switch (operation)
             {
@@ -107,19 +107,79 @@ namespace SimpleCalculator
 
         private void buttonAddition_Click(object sender, EventArgs e)
         {
-            if(num1 == 0)
+            num1 = Double.Parse(numberBox.Text);
+            numberBox.Text = "";
+            operation = "+";
+        }
+
+        private void buttonSubtraction_Click(object sender, EventArgs e)
+        {
+            num1 = Double.Parse(numberBox.Text);
+            numberBox.Text = "";
+            operation = "-";
+
+        }
+
+        private void buttonMultiply_Click(object sender, EventArgs e)
+        {
+            num1 = Double.Parse(numberBox.Text);
+            numberBox.Text = "";
+            operation = "X";
+        }
+
+        private void buttonDivide_Click(object sender, EventArgs e)
+        {
+            num1 = Double.Parse(numberBox.Text);
+            numberBox.Text = "";
+            operation = "/";
+        }
+
+        private void buttonEquals_Click(object sender, EventArgs e)
+        {
+            if(operation == null)
             {
-                num1 = Double.Parse(numberBox.Text);
-                numberBox.Text = "";
-                operation = "+";
+                return; 
             }
-            else if(num2 == 0)
+
+            num2 = Double.Parse(numberBox.Text);
+
+            switch (operation)
             {
-                num2 = Double.Parse(numberBox.Text);
-                numberBox.Text = "";
-                calculate(num1, num2, operation);
+                case "+":
+                    num3 = num1 + num2;
+                    num1 = 0;
+                    num2 = 0;
+
+                    numberBox.Text = num3.ToString();
+                    break;
+
+                case "-":
+                    num3 = num1 - num2;
+                    num1 = 0;
+                    num2 = 0;
+
+                    numberBox.Text = num3.ToString();
+                    break;
+                case "X":
+                    num3 = num1 * num2;
+                    num1 = 0;
+                    num2 = 0;
+
+                    numberBox.Text = num3.ToString();
+                    break;
+                case "/":
+                    num3 = num1 / num2;
+                    num1 = 0;
+                    num2 = 0;
+
+                    numberBox.Text = num3.ToString();
+                    break;
+
+
+
+
             }
-           
+
         }
     }
 }

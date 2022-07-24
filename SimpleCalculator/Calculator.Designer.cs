@@ -190,6 +190,7 @@ namespace SimpleCalculator
             this.buttonEquals.Text = "=";
             this.buttonEquals.UseVisualStyleBackColor = true;
             this.buttonEquals.UseWaitCursor = true;
+            this.buttonEquals.Click += new System.EventHandler(this.buttonEquals_Click);
             // 
             // buttonAddition
             // 
@@ -213,6 +214,7 @@ namespace SimpleCalculator
             this.buttonSubtraction.Text = "-";
             this.buttonSubtraction.UseVisualStyleBackColor = true;
             this.buttonSubtraction.UseWaitCursor = true;
+            this.buttonSubtraction.Click += new System.EventHandler(this.buttonSubtraction_Click);
             // 
             // buttonMultiply
             // 
@@ -224,6 +226,7 @@ namespace SimpleCalculator
             this.buttonMultiply.Text = "X";
             this.buttonMultiply.UseVisualStyleBackColor = true;
             this.buttonMultiply.UseWaitCursor = true;
+            this.buttonMultiply.Click += new System.EventHandler(this.buttonMultiply_Click);
             // 
             // buttonDivide
             // 
@@ -235,6 +238,7 @@ namespace SimpleCalculator
             this.buttonDivide.Text = "÷";
             this.buttonDivide.UseVisualStyleBackColor = true;
             this.buttonDivide.UseWaitCursor = true;
+            this.buttonDivide.Click += new System.EventHandler(this.buttonDivide_Click);
             // 
             // numberBox
             // 
