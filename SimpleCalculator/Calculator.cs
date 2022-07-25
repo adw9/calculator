@@ -86,25 +86,6 @@ namespace SimpleCalculator
             numberBox.Text += '.';
         }
 
-
-        private void calculate(double num1, double num2, String operation)
-        {
-
-            
-
-            switch (operation)
-            {
-                case "+":
-                    num3 = num1 + num2;
-                    num1 = 0;
-                    num2 = 0;
-
-                    numberBox.Text = num3.ToString();
-                    break;
-            }
-
-        }
-
         private void buttonAddition_Click(object sender, EventArgs e)
         {
             num1 = Double.Parse(numberBox.Text);
@@ -134,6 +115,8 @@ namespace SimpleCalculator
             operation = "/";
         }
 
+
+        //Contains the actual operation run
         private void buttonEquals_Click(object sender, EventArgs e)
         {
             if(operation == null)
@@ -174,11 +157,9 @@ namespace SimpleCalculator
 
                     numberBox.Text = num3.ToString();
                     break;
-
-
-
-
             }
+
+            num3 = 0;
 
         }
     }
