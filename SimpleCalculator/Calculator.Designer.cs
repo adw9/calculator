@@ -288,6 +288,8 @@ namespace SimpleCalculator
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Calculator";
             this.Text = "Calculator";
             this.UseWaitCursor = true;
@@ -298,8 +300,6 @@ namespace SimpleCalculator
         }
 
         #endregion
-
-
 
 
 
