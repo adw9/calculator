@@ -206,5 +206,13 @@ namespace SimpleCalculator
             }
         }
 
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            num1 = 0;
+            num2 = 0;
+            num3 = 0;
+            error = false;
+            numberBox.Text = "";
+        }
     }
 }

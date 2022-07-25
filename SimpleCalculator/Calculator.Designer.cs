@@ -46,6 +46,7 @@ namespace SimpleCalculator
             this.buttonMultiply = new System.Windows.Forms.Button();
             this.buttonDivide = new System.Windows.Forms.Button();
             this.numberBox = new System.Windows.Forms.TextBox();
+            this.buttonClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -252,11 +253,24 @@ namespace SimpleCalculator
             this.numberBox.TabStop = false;
             this.numberBox.UseWaitCursor = true;
             // 
+            // buttonClear
+            // 
+            this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.buttonClear.Location = new System.Drawing.Point(12, 119);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(153, 31);
+            this.buttonClear.TabIndex = 24;
+            this.buttonClear.Text = "Clear";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.UseWaitCursor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 712);
+            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.numberBox);
             this.Controls.Add(this.buttonAddition);
             this.Controls.Add(this.buttonSubtraction);
@@ -306,6 +320,7 @@ namespace SimpleCalculator
         private System.Windows.Forms.Button buttonMultiply;
         private System.Windows.Forms.Button buttonDivide;
         private System.Windows.Forms.TextBox numberBox;
+        private System.Windows.Forms.Button buttonClear;
     }
 }
 
