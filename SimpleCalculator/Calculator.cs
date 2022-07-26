@@ -217,5 +217,32 @@ namespace SimpleCalculator
             error = false;
             numberBox.Text = "";
         }
+
+        private void buttonPercent_Click(object sender, EventArgs e)
+        {
+            if (error || numberBox.Text.Equals(""))
+            {
+                return;
+            }
+            num3 = Double.Parse(numberBox.Text);
+            num3 *= .1;
+            numberBox.Text = num3.ToString();
+            num3 = 0;
+
+
+        }
+
+        private void buttonMinus_Click(object sender, EventArgs e)
+        {
+            if (error || numberBox.Text.Equals(""))
+            {
+                return;
+            }
+            num3 = Double.Parse(numberBox.Text);
+            num3 *= -1;
+            numberBox.Text = num3.ToString();
+            num3 = 0;
+
+        }
     }
 }

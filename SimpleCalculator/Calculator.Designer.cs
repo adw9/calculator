@@ -47,6 +47,8 @@ namespace SimpleCalculator
             this.buttonDivide = new System.Windows.Forms.Button();
             this.numberBox = new System.Windows.Forms.TextBox();
             this.buttonClear = new System.Windows.Forms.Button();
+            this.buttonPercent = new System.Windows.Forms.Button();
+            this.buttonMinus = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -162,7 +164,7 @@ namespace SimpleCalculator
             this.button0.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.button0.Location = new System.Drawing.Point(12, 583);
             this.button0.Name = "button0";
-            this.button0.Size = new System.Drawing.Size(153, 107);
+            this.button0.Size = new System.Drawing.Size(312, 107);
             this.button0.TabIndex = 16;
             this.button0.Text = "0";
             this.button0.UseVisualStyleBackColor = true;
@@ -172,7 +174,7 @@ namespace SimpleCalculator
             // buttonDecimal
             // 
             this.buttonDecimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.buttonDecimal.Location = new System.Drawing.Point(171, 583);
+            this.buttonDecimal.Location = new System.Drawing.Point(330, 583);
             this.buttonDecimal.Name = "buttonDecimal";
             this.buttonDecimal.Size = new System.Drawing.Size(153, 107);
             this.buttonDecimal.TabIndex = 17;
@@ -184,7 +186,7 @@ namespace SimpleCalculator
             // buttonEquals
             // 
             this.buttonEquals.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.buttonEquals.Location = new System.Drawing.Point(330, 583);
+            this.buttonEquals.Location = new System.Drawing.Point(489, 583);
             this.buttonEquals.Name = "buttonEquals";
             this.buttonEquals.Size = new System.Drawing.Size(153, 107);
             this.buttonEquals.TabIndex = 18;
@@ -196,7 +198,7 @@ namespace SimpleCalculator
             // buttonAddition
             // 
             this.buttonAddition.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.buttonAddition.Location = new System.Drawing.Point(489, 583);
+            this.buttonAddition.Location = new System.Drawing.Point(489, 470);
             this.buttonAddition.Name = "buttonAddition";
             this.buttonAddition.Size = new System.Drawing.Size(153, 107);
             this.buttonAddition.TabIndex = 22;
@@ -208,7 +210,7 @@ namespace SimpleCalculator
             // buttonSubtraction
             // 
             this.buttonSubtraction.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.buttonSubtraction.Location = new System.Drawing.Point(489, 470);
+            this.buttonSubtraction.Location = new System.Drawing.Point(489, 357);
             this.buttonSubtraction.Name = "buttonSubtraction";
             this.buttonSubtraction.Size = new System.Drawing.Size(153, 107);
             this.buttonSubtraction.TabIndex = 21;
@@ -220,7 +222,7 @@ namespace SimpleCalculator
             // buttonMultiply
             // 
             this.buttonMultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.buttonMultiply.Location = new System.Drawing.Point(489, 357);
+            this.buttonMultiply.Location = new System.Drawing.Point(489, 244);
             this.buttonMultiply.Name = "buttonMultiply";
             this.buttonMultiply.Size = new System.Drawing.Size(153, 107);
             this.buttonMultiply.TabIndex = 20;
@@ -232,7 +234,7 @@ namespace SimpleCalculator
             // buttonDivide
             // 
             this.buttonDivide.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.buttonDivide.Location = new System.Drawing.Point(489, 244);
+            this.buttonDivide.Location = new System.Drawing.Point(489, 131);
             this.buttonDivide.Name = "buttonDivide";
             this.buttonDivide.Size = new System.Drawing.Size(153, 107);
             this.buttonDivide.TabIndex = 19;
@@ -244,7 +246,7 @@ namespace SimpleCalculator
             // numberBox
             // 
             this.numberBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 33F);
-            this.numberBox.Location = new System.Drawing.Point(12, 156);
+            this.numberBox.Location = new System.Drawing.Point(12, 32);
             this.numberBox.MaxLength = 17;
             this.numberBox.Name = "numberBox";
             this.numberBox.ReadOnly = true;
@@ -255,21 +257,47 @@ namespace SimpleCalculator
             // 
             // buttonClear
             // 
-            this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.buttonClear.Location = new System.Drawing.Point(12, 119);
+            this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.buttonClear.Location = new System.Drawing.Point(12, 131);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(153, 31);
+            this.buttonClear.Size = new System.Drawing.Size(153, 107);
             this.buttonClear.TabIndex = 24;
-            this.buttonClear.Text = "Clear";
+            this.buttonClear.Text = "C";
             this.buttonClear.UseVisualStyleBackColor = true;
             this.buttonClear.UseWaitCursor = true;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
+            // buttonPercent
+            // 
+            this.buttonPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.buttonPercent.Location = new System.Drawing.Point(330, 131);
+            this.buttonPercent.Name = "buttonPercent";
+            this.buttonPercent.Size = new System.Drawing.Size(153, 107);
+            this.buttonPercent.TabIndex = 25;
+            this.buttonPercent.Text = "%";
+            this.buttonPercent.UseVisualStyleBackColor = true;
+            this.buttonPercent.UseWaitCursor = true;
+            this.buttonPercent.Click += new System.EventHandler(this.buttonPercent_Click);
+            // 
+            // buttonMinus
+            // 
+            this.buttonMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.buttonMinus.Location = new System.Drawing.Point(171, 131);
+            this.buttonMinus.Name = "buttonMinus";
+            this.buttonMinus.Size = new System.Drawing.Size(153, 107);
+            this.buttonMinus.TabIndex = 26;
+            this.buttonMinus.Text = "+/-";
+            this.buttonMinus.UseVisualStyleBackColor = true;
+            this.buttonMinus.UseWaitCursor = true;
+            this.buttonMinus.Click += new System.EventHandler(this.buttonMinus_Click);
             // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 712);
+            this.Controls.Add(this.buttonMinus);
+            this.Controls.Add(this.buttonPercent);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.numberBox);
             this.Controls.Add(this.buttonAddition);
@@ -321,6 +349,8 @@ namespace SimpleCalculator
         private System.Windows.Forms.Button buttonDivide;
         private System.Windows.Forms.TextBox numberBox;
         private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Button buttonPercent;
+        private System.Windows.Forms.Button buttonMinus;
     }
 }
 
