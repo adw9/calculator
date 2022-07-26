@@ -99,12 +99,15 @@ namespace SimpleCalculator
         private void buttonDecimal_Click(object sender, EventArgs e)
         {
             errorCheck();
+
+            if (numberBox.Text.Contains(".")) return;
+
             numberBox.Text += '.';
         }
 
         private void buttonAddition_Click(object sender, EventArgs e)
         {
-            if (error) return;
+            if (error || numberBox.Text.Equals("")) return;
 
 
             num1 = Double.Parse(numberBox.Text);
@@ -114,7 +117,7 @@ namespace SimpleCalculator
 
         private void buttonSubtraction_Click(object sender, EventArgs e)
         {
-            if (error) return;
+            if (error || numberBox.Text.Equals("")) return;
 
             num1 = Double.Parse(numberBox.Text);
             numberBox.Text = "";
@@ -124,7 +127,7 @@ namespace SimpleCalculator
 
         private void buttonMultiply_Click(object sender, EventArgs e)
         {
-            if (error) return;
+            if (error || numberBox.Text.Equals("")) return;
 
             num1 = Double.Parse(numberBox.Text);
             numberBox.Text = "";
@@ -133,7 +136,7 @@ namespace SimpleCalculator
 
         private void buttonDivide_Click(object sender, EventArgs e)
         {
-            if (error) return;
+            if (error || numberBox.Text.Equals("")) return;
             num1 = Double.Parse(numberBox.Text);
             numberBox.Text = "";
             operation = "/";
@@ -143,7 +146,7 @@ namespace SimpleCalculator
         //Contains the actual operation run
         private void buttonEquals_Click(object sender, EventArgs e)
         {
-            if(operation == null || error)
+            if (operation == null || error || numberBox.Text.Equals(""))
             {
                 return; 
             }
